@@ -81,6 +81,7 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.ViewHolder
             public void onClick(View view) {
                 Log.i("Muskan DrinksAdapter","Item clicked");
                 Intent intent = new Intent(context, DetailsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("drink id", list.get(position).getIdDrink());
                 context.startActivity(intent);
             }
